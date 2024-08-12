@@ -144,7 +144,7 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 
 # Static files (CSS, JavaScript, Images)
-if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
+if 'S3_BUCKET' in os.environ:
     STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
     
