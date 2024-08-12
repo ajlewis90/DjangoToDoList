@@ -163,8 +163,9 @@ if 'AWS_STORAGE_BUCKET_NAME' in os.environ:
     AWS_S3_FILE_OVERWRITE = False
     #AWS_DEFAULT_ACL = 'public-read'
     AWS_DEFAULT_ACL = None
-    AWS_LOCATION = 'static'   
-    STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)
+
+    AWS_LOCATION = 'static'
+    STATIC_URL = 'https://%s/%s/' % (AWS_S3_CUSTOM_DOMAIN, AWS_LOCATION)    
 
 else:
     STATIC_URL = '/static/'
